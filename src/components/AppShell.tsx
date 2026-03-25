@@ -50,12 +50,12 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       </header>
 
       {/* Content */}
-      <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full relative z-10">
+      <main className="flex-1 px-4 py-6 pb-16 max-w-lg mx-auto w-full relative z-10">
         {children}
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 py-4 text-center bg-white/80 backdrop-blur-lg border-t border-surface-border">
+      <footer className="fixed bottom-0 left-0 right-0 z-40 py-4 text-center bg-white/80 backdrop-blur-lg border-t border-surface-border">
         <p className="text-sm text-text-secondary">
           Made with ❤️ for MK
         </p>
