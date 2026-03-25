@@ -13,9 +13,19 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   return (
-    <div className="min-h-dvh flex flex-col">
+    <div className="min-h-dvh flex flex-col relative">
+      {/* Background collage - fully visible */}
+      <div
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage: "url('/rohee-home.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
       {/* Header */}
-      <header className="bg-powder-blue/30 backdrop-blur-sm border-b border-surface-border px-4 py-3 flex items-center justify-between sticky top-0 z-40">
+      <header className="bg-white/70 backdrop-blur-md border-b border-surface-border px-4 py-3 flex items-center justify-between sticky top-0 z-40">
         <Link href="/dashboard" className="text-lg font-medium text-text-primary">
           Virtual Hugs
         </Link>
@@ -40,9 +50,16 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       </header>
 
       {/* Content */}
-      <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full">
+      <main className="flex-1 px-4 py-6 max-w-lg mx-auto w-full relative z-10">
         {children}
       </main>
+
+      {/* Footer */}
+      <footer className="relative z-10 py-4 text-center bg-white/80 backdrop-blur-lg border-t border-surface-border">
+        <p className="text-sm text-text-secondary">
+          Made with ❤️ for MK
+        </p>
+      </footer>
     </div>
   );
 }
