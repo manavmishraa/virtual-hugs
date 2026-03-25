@@ -217,28 +217,30 @@ export default function DashboardPage() {
       <div className="flex flex-col gap-6">
         {/* Header */}
         {user && (
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-xl font-medium text-text-primary">
-                Hi, {user.display_name}
-              </h1>
-              <p className="text-sm text-text-secondary">
-                {activePairing
-                  ? `Paired with ${partner?.display_name || "..."}`
-                  : pendingInvites.length > 0
-                  ? "Invite pending..."
-                  : "Not paired yet"}
-              </p>
+          <Card className="!p-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <h1 className="text-xl font-medium text-text-primary">
+                  Hi, {user.display_name}
+                </h1>
+                <p className="text-sm text-text-secondary">
+                  {activePairing
+                    ? `Paired with ${partner?.display_name || "..."}`
+                    : pendingInvites.length > 0
+                    ? "Invite pending..."
+                    : "Not paired yet"}
+                </p>
+              </div>
+              <form action="/auth/signout" method="POST">
+                <button
+                  type="submit"
+                  className="text-sm text-text-secondary hover:text-text-primary transition-colors cursor-pointer"
+                >
+                  Sign out
+                </button>
+              </form>
             </div>
-            <form action="/auth/signout" method="POST">
-              <button
-                type="submit"
-                className="text-sm text-text-secondary hover:text-text-primary transition-colors cursor-pointer"
-              >
-                Sign out
-              </button>
-            </form>
-          </div>
+          </Card>
         )}
 
         {/* Pending hugs from partner */}
