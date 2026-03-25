@@ -99,11 +99,11 @@ export default function SignupPage() {
     <div className="min-h-dvh flex items-center justify-center px-4 bg-bg">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 rounded-full bg-powder-blue mx-auto mb-4 flex items-center justify-center">
-            <svg className="w-8 h-8 text-text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 21C12 21 4 16.5 4 10.5C4 7.42 6.42 5 9.5 5C11.24 5 12 6 12 6C12 6 12.76 5 14.5 5C17.58 5 20 7.42 20 10.5C20 16.5 12 21 12 21Z" />
-            </svg>
-          </div>
+          <img
+            src="/rohee.jpeg"
+            alt="Virtual Hugs"
+            className="w-24 h-24 rounded-full mx-auto mb-4 object-cover shadow-lg"
+          />
           <h1 className="text-2xl font-medium text-text-primary">Join Virtual Hugs</h1>
           <p className="text-text-secondary mt-1">Create your account</p>
         </div>

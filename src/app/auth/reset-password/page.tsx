@@ -144,12 +144,11 @@ export default function ResetPasswordPage() {
     <div className="min-h-dvh flex items-center justify-center px-4 bg-bg">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 rounded-full bg-powder-blue mx-auto mb-4 flex items-center justify-center">
-            <svg className="w-8 h-8 text-text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0110 0v4" />
-            </svg>
-          </div>
+          <img
+            src="/rohee.jpeg"
+            alt="Virtual Hugs"
+            className="w-24 h-24 rounded-full mx-auto mb-4 object-cover shadow-lg"
+          />
           <h1 className="text-2xl font-medium text-text-primary">Set New Password</h1>
           <p className="text-text-secondary mt-1">Choose a new password for your account</p>
         </div>
