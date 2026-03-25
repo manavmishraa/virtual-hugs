@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Primary Brand */
+  --color-powder-blue: #B0E0E6;
+  --color-powder-blue-hover: #94D2DC;
+  --color-powder-blue-pressed: #7CC4D0;
+  --color-powder-blue-10: rgba(176, 224, 230, 0.1);
+
+  /* Backgrounds & Surfaces */
+  --color-bg: #F0F8FB;
+  --color-surface: #FFFFFF;
+  --color-surface-border: #D4EEF3;
+
+  /* Text */
+  --color-text-primary: #1C2D36;
+  --color-text-secondary: #6B8A95;
+
+  /* Semantic */
+  --color-destructive: #E8787A;
+  --color-success: #8BCFB7;
+
+  /* Hug Experience - Warm */
+  --color-warm-start: #F5C882;
+  --color-warm-end: #E8A94E;
+  --color-warm-glow: #FFF5E6;
+
+  /* Hug Experience - Tight */
+  --color-tight-start: #D4836A;
+  --color-tight-end: #B85C43;
+  --color-tight-glow: #FFE0D4;
+
+  /* Hug Experience - Nudge */
+  --color-nudge-start: #B0E0E6;
+  --color-nudge-end: #E6F5F8;
+
+  /* Spacing */
+  --radius-card: 14px;
+  --radius-button: 12px;
+  --radius-full: 9999px;
+
+  /* Font */
+  --font-sans: "Nunito", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #F0F8FB;
+  color: #1C2D36;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
 }
+
+/* Remove any dark mode overrides — this app is always light/warm */
